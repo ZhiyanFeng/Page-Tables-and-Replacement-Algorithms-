@@ -1,0 +1,40 @@
+rand 	200	150	100	50
+Hit rate: 	74.4228	74.3092	74.0254	71.9152
+Hit count: 	7865	7853	7832	7600
+Miss count: 	2703	2715	2745	2968
+overall eviction count	2503	2565	2645	2918
+Clean evictions: 	17	14	49	221
+Dirty evictions: 	2486	2551	2596	2697
+				
+fifo				
+Hit rate: 	74.4417	74.366	74.0064	71.9436
+Hit count: 	7867	7859	7821	7603
+Miss count: 	2701	2709	2747	2965
+overall eviction count	2501	2559	2647	2915
+Clean evictions: 	12	16	42	207
+Dirty evictions: 	2489	2543	2605	2708
+				
+lru				
+Hit rate: 	74.6877	74.6877	74.6688	73.7415
+Hit count: 	7893	7893	7891	7793
+Miss count: 	2675	2675	2677	2775
+overall eviction count	2475	2525	2577	2725
+Clean evictions: 	0	0	0	91
+Dirty evictions: 	2475	2525	2577	2634
+				
+				
+clock				
+Hit rate: 	74.6783	74.6688	74.6593	73.5712
+Hit count: 	7892	7891	7890	7775
+Miss count: 	2676	2677	2678	2793
+overall eviction count	2476	2527	2578	2743
+Clean evictions: 	0	0	1	103
+Dirty evictions: 	2476	2527	2577	2640
+				
+				
+all data get from this command /sim -f /u/csc369h/winter/pub/a2-traces/tr-simpleloop.ref -m 100 -s 3000 -a algo				
+the hit rate lru > clock > fifo > rand	rand for memsize 50, 100			
+hit rate lru> clock >fifo> rand  memsize 100, 200 				
+				
+the lru algo hit rate increase as memsize increase and stablize from memsize 150 because the more memory the more we can draw 				
+information from it to better represent the whole virtual data				
